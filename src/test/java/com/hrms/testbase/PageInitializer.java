@@ -7,6 +7,7 @@ import com.hrms.pages.EmployeeListPageElements;
 import com.hrms.pages.LoginPageElements;
 import com.hrms.pages.PersonalDetailsPageElements;
 import com.hrms.pages.ReportPageElements;
+import com.hrms.steps.ViewEmployeePageElements;
 
 
 
@@ -20,6 +21,7 @@ public class PageInitializer extends BaseClass{
 	public static PersonalDetailsPageElements personalDetails;
 	public static ReportPageElements creatReport;
 	public static EmployeeListPageElements empList;
+	public static ViewEmployeePageElements viewEmp;
 	
 	
 
@@ -35,7 +37,7 @@ public class PageInitializer extends BaseClass{
 		 creatReport=new ReportPageElements();
 		
 		empList= new EmployeeListPageElements();
-		
+		viewEmp= new ViewEmployeePageElements();
 	}
 
 }

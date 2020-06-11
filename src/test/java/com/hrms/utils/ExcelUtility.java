@@ -2,16 +2,18 @@ package com.hrms.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtility {
-
 	private static Workbook book;
 	private static Sheet sheet;
-	
 	private static void openExcel(String filePath) {
 		try {
 			FileInputStream fis=new FileInputStream(filePath);
@@ -21,7 +23,6 @@ public class ExcelUtility {
 					
 					e.printStackTrace();
 				}
-		
 	}
 	private static void loadSheet(String sheetName) {
 		sheet=book.getSheet(sheetName);
@@ -53,10 +54,28 @@ public class ExcelUtility {
 				data[row - 1][col] = getCellData(row, col);
 			}
 		}
-
 		return data;
 	}
 
-	//HW Create a method that will return a List of Maps
+	public static List<Map<String, String>> excelIntoListOfMaps(String filePath, String sheetName) {
+
+		openExcel(filePath);
+		loadSheet(sheetName);
+
+		List<Map<String, String>> list = new ArrayList<>();
+		Map<String, String> excelMap;
+
+		for (int row = 1; row < countRow(); row++) {
+			excelMap = new LinkedHashMap<>();
+
+			for (int c = 0; c < countCols(row); c++) {
+				excelMap.put(getCellData(0, c), getCellData(row, c));
+			}
+			list.add(excelMap);
+		}
+
+		return list;
+	}
+	
 	
 }
