@@ -14,7 +14,9 @@ C:\Users\baria\eclipse-workspace\Hrms\src\test\java\com\hrms\utils\ConfigsReader
 C:\Users\baria\eclipse-workspace\Hrms\src\test\java\com\hrms\steps\DashboardSteps.java
 C:\Users\baria\eclipse-workspace\Hrms\src\test\java\com\hrms\steps\ViewEmployeePageElements.java
 C:\Users\baria\eclipse-workspace\Hrms\src\test\java\com\hrms\pages\LoginPageElements.java
+C:\Users\baria\eclipse-workspace\Hrms\src\test\java\com\hrms\runners\FailedRunner.java
 C:\Users\baria\eclipse-workspace\Hrms\src\test\java\com\hrms\testbase\PageInitializer.java
+C:\Users\baria\eclipse-workspace\Hrms\src\test\java\com\hrms\runners\TestRunner.java
 C:\Users\baria\eclipse-workspace\Hrms\src\test\java\com\hrms\testbase\BaseClass.java
 C:\Users\baria\eclipse-workspace\Hrms\src\test\java\com\hrms\pages\AddEmployeePageElements.java
 C:\Users\baria\eclipse-workspace\Hrms\src\test\java\com\hrms\pages\EmployeeListPageElements.java

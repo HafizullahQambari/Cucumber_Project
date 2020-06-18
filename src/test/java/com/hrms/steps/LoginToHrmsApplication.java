@@ -35,7 +35,7 @@ public class LoginToHrmsApplication extends CommonMethods {
 
 	@Then("admin user is successfully logged in")
 	public void admin_user_is_successfully_logged_in() {
-		String expected = "Welcome Admin";
+		String expected = "welcome Admin";
 		String actual = dash.welcome.getText();
 		Assert.assertEquals("Welcome message is not displayed or not correct ", expected, actual);
 		System.out.println(actual);
@@ -43,7 +43,7 @@ public class LoginToHrmsApplication extends CommonMethods {
 
 	@When("user enter valid ess username and password")
 	public void user_enter_valid_ess_username_and_password() {
-		sendText(login.username, "Gince123");
+		sendText(login.username, "Gince12");
 		sendText(login.password, "SyntaxHrm123!");
 	}
 

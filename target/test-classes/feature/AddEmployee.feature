@@ -8,7 +8,7 @@ Feature: Add Employee
     And user navigate to add Employee Page
 
   Scenario: Add new Employee
-    When user enters employees "John" and "Smith"
+    When user enters employees "hafiz" and "qambari"
     And user clicks save button
     Then "John Smith" is added successfully
 
@@ -44,6 +44,7 @@ Feature: Add Employee
       | FirstName | MiddleName | LastName |
       | shahram   | Abdul      | parsa    |
       | bahram    | Aziz       | parsa    |
-@regression
+@inwork
    Scenario: Adding multiple employees from excel
    When user enters employee data from "EmployeeLoginCredentials" excel sheet then employee is added
+   

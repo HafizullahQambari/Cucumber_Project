@@ -10,6 +10,23 @@ import com.hrms.testbase.BaseClass;
 
 public class PersonalDetailsPageElements {
 
+	@FindBy (id="personal_txtEmpFirstName")
+	public WebElement empFirstName;
+	
+	@FindBy (id="personal_txtEmpMiddleName")
+	public WebElement empMilldeName;
+	
+	@FindBy (id="personal_txtEmpLastName")
+	public WebElement empLastName;
+	
+	@FindBy (id="personal_txtLicenNo")
+	public WebElement empDLicense;
+	
+	@FindBy (id="//input[@id='personal_txtLicExpDate']")
+	public WebElement empDlicenseExpiryD;
+	
+	
+	
 	@FindBy(id = "personal_cmbNation")
 	public WebElement nationalityDD;
 
