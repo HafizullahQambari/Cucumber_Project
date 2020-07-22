@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.hrms.testbase.BaseClass;
 import com.hrms.utils.CommonMethods;
-import com.hrms.utils.ConfigsReader;
+import com.hrms.utils.ConfigReader;
 
 public class LoginPageElements extends CommonMethods {
 
@@ -31,8 +31,8 @@ public class LoginPageElements extends CommonMethods {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
 	public void login() {
-		sendText(username, ConfigsReader.getProperty("username"));
-		sendText(password, ConfigsReader.getProperty("password"));
+		sendText(username, ConfigReader.getProperty("username"));
+		sendText(password, ConfigReader.getProperty("password"));
 		loginBtn.click();
 		
 		

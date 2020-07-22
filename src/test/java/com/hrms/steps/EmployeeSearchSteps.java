@@ -1,8 +1,5 @@
 package com.hrms.steps;
 
-
-
-
 import org.junit.Assert;
 
 import com.hrms.utils.CommonMethods;
@@ -41,5 +38,20 @@ public class EmployeeSearchSteps extends CommonMethods {
 		sendText(viewEmp.empName, "RamP");
 		sendText(viewEmp.empID,"12412");
 
+	}
+	
+	@Then("verify table is displayed")
+	public void verify_table_is_displayed() {
+	  Assert.assertEquals(true, empList.isTableDisplayed());
+	}
+ 
+	@Then("get last name from table")
+	public void get_last_name_from_table() {
+	    System.out.println(empList.getLastnameFromTable());
+	}
+	
+	@Then("validate last name from UI against database")
+	public void validate_last_name_from_UI_against_database() {
+	 Assert.assertEquals(DatabaseSteps.DbData, empList.getLastnameFromTable());
 	}
 }

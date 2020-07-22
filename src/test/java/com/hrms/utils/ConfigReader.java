@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class ConfigsReader {
+public class ConfigReader {
 	/**
 	 * This Method read properties file
 	 * @param filePath

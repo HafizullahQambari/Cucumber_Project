@@ -10,7 +10,7 @@ Feature: Add Employee
   Scenario: Add new Employee
     When user enters employees "hafiz" and "qambari"
     And user clicks save button
-    Then "John Smith" is added successfully
+    Then "hafiz qambari" is added successfully
 
   Scenario: Add Employee without employee id
     When user enters employees firstName and lastName

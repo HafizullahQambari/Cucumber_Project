@@ -6,7 +6,7 @@ import java.util.Map;
 import org.junit.Assert;
 
 import com.hrms.utils.CommonMethods;
-import com.hrms.utils.ConfigsReader;
+import com.hrms.utils.ConfigReader;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -17,15 +17,15 @@ public class LoginToHrmsApplication extends CommonMethods {
 
 	@Given("user is logged with valid admin credentials")
 	public void user_is_logged_with_valid_admin_credentials() {
-		sendText(login.username, ConfigsReader.getProperty("username"));
-		sendText(login.password, ConfigsReader.getProperty("password"));
+		sendText(login.username, ConfigReader.getProperty("username"));
+		sendText(login.password, ConfigReader.getProperty("password"));
 		click(login.loginBtn);
 	}
 
 	@When("user enter valid admin username and password")
 	public void user_enter_valid_admin_username_and_password() {
-		sendText(login.username, ConfigsReader.getProperty("username"));
-		sendText(login.password, ConfigsReader.getProperty("password"));
+		sendText(login.username, ConfigReader.getProperty("username"));
+		sendText(login.password, ConfigReader.getProperty("password"));
 	}
 
 	@When("user click on login button")

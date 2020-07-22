@@ -2,7 +2,7 @@ package com.hrms.utils;
 
 public class Constants {
 
-	public static final String CONFIGURATION_FILEPATH=System.getProperty("user.dir")+"\\src\\test\\resources\\Configs\\Configuration.properties";
+	public static final String CONFIGURATION_FILEPATH=System.getProperty("user.dir")+"\\src\\test\\resources\\Configs\\Configs.properties";
 	
 	public static final String TESTDATA_FILEPATH = System.getProperty("user.dir")+"\\src\\test\\resources\\TestData\\HRMSTEST.xlsx";
 	
