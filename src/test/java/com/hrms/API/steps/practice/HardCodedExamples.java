@@ -31,7 +31,7 @@ public class HardCodedExamples {
 	 * @param args
 	 */
 	static String baseURI = RestAssured.baseURI = "http://18.232.148.34/syntaxapi/api";
-	static String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTUxNjg1NjQsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTU5NTIxMTc2NCwidXNlcklkIjoiNjg1In0.8cGE6yyo_Q6_ym0QvOOkBEEge-uF7tKf6sYbuxPmGgo";
+	static String token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1OTU0NTI0MzAsImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTU5NTQ5NTYzMCwidXNlcklkIjoiNjg1In0._Fnh2SFin5FCVGkVfmavXKPTpLkXY7YrPHUiO5G9QGo";
 	static String employeeID;
 	public void sampleTestNotes() {
 
@@ -185,6 +185,7 @@ public class HardCodedExamples {
 		int sizeOfList=js.getInt("Employees.size()");
 		
 		System.out.println(sizeOfList);
+	}
 		
 //		for(int i=0; i<=sizeOfList; i++) {
 //			/**
@@ -206,22 +207,20 @@ public class HardCodedExamples {
 //			
 //		}
 		
+		@Test
+	    public void dPUTupdateCreatedEmployee() {
+	        RequestSpecification updateCreatedEmployeeRequest = given().header("Content-Type", "application/json")
+	                .header("Authorization", token).body(HardCodedConstants.updateCreateEmpBody());
+	        Response updateCreatedEmployeeResponse = updateCreatedEmployeeRequest.when().put("/updateEmployee.php");
+	        String response = updateCreatedEmployeeResponse.prettyPrint();
+	        System.out.println(response);
+	    }
 	}
-@Test
-	public void dPUTupdateCreatedEmployee(){
-		RequestSpecification updateCreatedEmployeeRequest = given().header("Content-Type", "application/json").header("Authorization", token).body("{\r\n" + 
-				"            \"employee_id\": \""+employeeID+"\",\r\n" + 
-				"            \"emp_firstname\": \"hafiz\",\r\n" + 
-				"            \"emp_middle_name\": \"Qam\",\r\n" + 
-				"            \"emp_lastname\": \"Qambari\",\r\n" + 
-				"            \"emp_birthday\": \"1993-07-11\",\r\n" + 
-				"            \"emp_gender\": \"Male\",\r\n" + 
-				"            \"emp_job_title\": \"Developer\",\r\n" + 
-				"            \"emp_status\": \"Employee\"\r\n" + 
-				"        }");
-		Response updateCreatedEmployeeResponse=updateCreatedEmployeeRequest.when().put("/updateEmployee.php");
-		
-		System.out.println(updateCreatedEmployeeResponse);
-	}
-		
-}
+	
+
+
+
+
+
+
+
